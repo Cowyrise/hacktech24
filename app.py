@@ -13,11 +13,9 @@ def index():
         print(email_results(email_recipient, session['prediction_result']))
         return redirect(url_for('predict'))  # Redirect to page with the results again 
     else:
-        print('Session: ' + str(session['prediction_result']))
         return render_template('index.html')
-    # get the email_results
+
     # abstract away the password
-    # reload onto the same page so the results are still visibile
     # email validation
 
 @app.route('/predict', methods=['GET', 'POST'])
