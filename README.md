@@ -26,6 +26,8 @@ In a new browser window, type in:
 http://127.0.0.1:5000/
 ```
 
+Now you can explore the application, inputting known information of both parents
+
 ## Credits
 **Beautiful Soup**: Python web-scraper
 
