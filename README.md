@@ -5,7 +5,7 @@ According to Lurie Children's Hospital, 1 in 10 Americans live with a rare disea
 
 This web application hopes to remediate these worries by providing a low-cost and efficient way to predict the probability of offspring inheriting a particular genetic disorder based on the genetic traits of their parents, providing parents and future parents preparation before symptoms appear.
 
-## 1. Download and Install 
+## 1. Download and Install 📁
 
 In a terminal, clone the repository:
 
@@ -13,14 +13,14 @@ In a terminal, clone the repository:
 https://github.com/Cowyrise/hacktech24.git
 ```
 
-## 2. Starting the Server
+## 2. Starting the Server 🌐
 Once in the folder, run
 
 ```
 python app.py
 ```
 
-## 3. Running the client
+## 3. Running the client 👨‍💻
 In a new browser window, type in:
 ```
 http://127.0.0.1:5000/
