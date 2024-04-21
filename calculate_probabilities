@@ -1,0 +1,37 @@
+from parsing import *
+
+data_extract()
+
+female_genes_list = [] # inputted from the user
+male_genes_list = [] # inputted from the user
+viewed = []
+
+for gene in female_genes_list:
+  if disorder_gene[gene] == 'D' or disorder_gene[gene] == 'dominant':
+    if gene in male_genes_list and gene not in viewed:
+        print(f"Probability of the offspring having {gene} is 93.75%")
+        viewed.append(gene)
+    elif gene not in male_genes_list and gene not in viewed:
+        print(f"Probability of the offspring having {gene} is 75%")
+        viewed.append(gene)
+    else:
+       pass
+  if disorder_gene[gene] == 'recessive':
+     if gene in male_genes_list and gene not in viewed:
+        print(f"Probability of the offspring having {gene} is 100%")
+        viewed.append(gene)
+     elif gene not in male_genes_list and gene not in viewed:
+        print(f"Probability of the offspring {gene} disorder is 25%")
+        viewed.append(gene)
+     else:
+        pass
+
+for gene in male_genes_list:
+    if gene not in viewed:
+        viewed.append(gene)
+        if disorder_gene[gene] == 'D' or disorder_gene[gene] == 'dominant':
+            print(f"Probability of the offspring having {gene} is 75%")
+        elif disorder_gene[gene] == 'recessive':
+            print(f"Probability of the offspring {gene} disorder is 25%")
+        else:
+            pass
