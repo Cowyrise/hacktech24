@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from probability_generator import calculate_probability
+from calculate_probabilities import calculate_probability
 
 app = Flask(__name__)
 
