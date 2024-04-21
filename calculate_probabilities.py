@@ -14,22 +14,22 @@ def calculate_probability(mother_disorders, father_disorders):
             if gene in male_genes_list and gene not in viewed:
                 #print(f"Probability of the offspring having {gene} is 93.75%")
                 viewed.append(gene)
-                probabilities[gene] = 93.75
+                probabilities[gene] = "93.75%"
             elif gene not in male_genes_list and gene not in viewed:
                 print(f"Probability of the offspring having {gene} is 75%")
                 viewed.append(gene)
-                probabilities[gene] = 75
+                probabilities[gene] = "75%"
             else:
                 pass
         if disorder_gene[gene] == 'recessive':
             if gene in male_genes_list and gene not in viewed:
                 print(f"Probability of the offspring having {gene} is 100%")
                 viewed.append(gene)
-                probabilities[gene] = 100
+                probabilities[gene] = "100%"
             elif gene not in male_genes_list and gene not in viewed:
                 print(f"Probability of the offspring {gene} disorder is 25%")
                 viewed.append(gene)
-                probabilities[gene] = 25
+                probabilities[gene] = "25%"
             else:
                 pass
     for gene in male_genes_list:
@@ -37,10 +37,10 @@ def calculate_probability(mother_disorders, father_disorders):
             viewed.append(gene)
             if disorder_gene[gene] == 'D' or disorder_gene[gene] == 'dominant':
                 print(f"Probability of the offspring having {gene} is 75%")
-                probabilities[gene] = 75
+                probabilities[gene] = "75%"
             elif disorder_gene[gene] == 'recessive':
                 print(f"Probability of the offspring {gene} disorder is 25%")
-                probabilities[gene] = 25
+                probabilities[gene] = "25%"
             else:
                 pass
     return probabilities
